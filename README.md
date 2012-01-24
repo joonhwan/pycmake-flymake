@@ -21,7 +21,8 @@ Usage
 ---
 
 1. Create Makefiles for flymake in one step (Make sure you've run cmake under ~/your_project/cmake_project_build/ at first)
-        cmflymk ~/your_project/cmake_project_build/ 
+
+        `cmflymk ~/your_project/cmake_project_build/`
 	
 2. `M-x flymake-mode` in Emacs
 3. DONE!
