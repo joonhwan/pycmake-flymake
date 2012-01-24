@@ -17,8 +17,8 @@ Installation
 
 	cd your_projects_dir
 	git clone git://github.com/redguardtoo/pycmake-flymake.git
-	cd cmake-flymake
-	ln -s "$PWD"/cmake-flymake-{generate,remove} ~/bin # or wherever you put your scripts
+	cd pycmake-flymake
+	mv cmflymk ~/bin # or wherever you put your scripts
 
 Use
 ---
