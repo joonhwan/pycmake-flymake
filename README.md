@@ -15,31 +15,22 @@ These scripts require a few obvious dependencies.
 Installation
 ------------
 
-	cd your_projects_dir
-	git clone git://github.com/redguardtoo/pycmake-flymake.git
-	cd pycmake-flymake
-	mv cmflymk ~/bin # or wherever you put your scripts
+	All you need is the script `cmflymk`. Download it at https://github.com/redguardtoo/pycmake-flymake.
 
-Use
+Usage
 ---
 
-1. Follow these project setup instructions:
-
-		cd your_cmake_project
-		mkdir build # your build directory
-		cd build
-		cmake .. # create the CMake configs
-        cmflymk build/ #Both relative/absolute path are fine. And your Current Word Directory (CWD) doesn't matter.
+1. Create Makefiles for flymake in one step (Make sure you've run cmake under ~/your_project/cmake_project_build/ at first)
+        cmflymk ~/your_project/cmake_project_build/ 
 	
-2. Open your file in Emacs.
-3. `M-x flymake-mode`
-4. Enjoy the incremental compilation!
+2. `M-x flymake-mode` in Emacs
+3. DONE!
 
 Other Notes
 -----------
 
-* When you change any of your `CMakeLists.txt` files, re-run `cmake ..` and `cmflymk`.
+* When you change any of your `CMakeLists.txt` files, re-run `cmake` and `cmflymk`.
 * To remove the Flymake Makefiles, run `cmflymk -c`.
 * These scripts are configured to use the GNU make variables ${CXX}, ${CXX\_FLAGS}, and ${CXX\_DEFINES} in the actual Makefiles. This means that the scripts will require editing to work with pure C projects (when using CC, CFLAGS, etc.) or any other language besides C++. This should be quite easy to figure out. Look at the actual Makefiles which get generated for more information.
-* I haven't tested this on Windows because I'm only working under Linux/Cygwin. Contact me if you need Windows support.
+* I haven't tested this on Windows because I'm only working under Linux/Cygwin. Contact me (chenbin DOT sh AT GMAIL) if you need Windows support.
 
